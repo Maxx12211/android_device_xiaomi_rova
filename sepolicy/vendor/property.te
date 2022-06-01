@@ -6,6 +6,11 @@ system_vendor_config_prop(vendor_camera_prop)
 
 # Dirac
 vendor_public_prop(dirac_prop)
+# Dolby
+vendor_internal_prop(vendor_dolby_loglevel_prop);
+
+# Init
+vendor_internal_prop(vendor_init_prop)
 
 # Power HAL
 vendor_internal_prop(vendor_power_prop)

@@ -19,6 +19,9 @@
 # FPS Info
 /sys/devices/virtual/graphics/fb0/measured_fps                u:object_r:sysfs_fps:s0
 
+# Dolby
+/vendor/bin/hw/vendor\.dolby\.hardware\.dms@1\.0-service                     u:object_r:hal_dms_default_exec:s0
+
 # Firmware
 /firmware                                                     u:object_r:firmware_file:s0
 /bt_firmware                                                  u:object_r:bt_firmware_file:s0

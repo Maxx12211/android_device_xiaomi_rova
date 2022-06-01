@@ -33,6 +33,11 @@ vidc.enc.dcvs.extra-buff-count u:object_r:camera_prop:s0
 # Dirac
 persist.audio.dirac.           u:object_r:dirac_prop:s0
 ro.audio.soundfx.dirac         u:object_r:dirac_prop:s0
+# Dolby
+persist.vendor.dolby.loglevel   u:object_r:vendor_dolby_loglevel_prop:s0
+
+# Init
+vendor.target.init.complete     u:object_r:vendor_init_prop:s0
 
 # IMS
 ctl.vendor.imsrcsd             u:object_r:vendor_ctl_vendor_imsrcsservice_prop:s0
