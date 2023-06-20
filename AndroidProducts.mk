@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_rova.mk
+    $(LOCAL_DIR)/corvus_rova.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_rova-user \
-    lineage_rova-userdebug \
-    lineage_rova-eng
+    corvus_rova-user \
+    corvus_rova-userdebug \
+    corvus_rova-eng

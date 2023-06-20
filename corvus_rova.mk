@@ -15,9 +15,20 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Inherit from rova device
 $(call inherit-product, device/xiaomi/rova/device.mk)
 
+# CorvusOS
+CORVUS_MAINTAINER=@maxx459
+USE_GAPPS=false
+TARGET_INCLUDE_LIVE_WALLPAPERS := false
+
+# FaceUnlock
+TARGET_FACE_UNLOCK_SUPPORTED := true
+
+# Pixel charging animation
+TARGET_INCLUDE_PIXEL_CHARGER := true
+
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := rova
-PRODUCT_NAME := lineage_rova
+PRODUCT_NAME := corvus_rova
 BOARD_VENDOR := Xiaomi
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi 4A / 5A
