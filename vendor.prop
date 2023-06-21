@@ -115,6 +115,7 @@ persist.vendor.camera.HAL3.enabled=1
 persist.vendor.cne.feature=1
 
 # Display
+debug.cpurend.vsync=false
 debug.enable.sglscale=1
 debug.hwui.renderer=skiagl
 debug.renderengine.backend=skiaglthreaded
@@ -127,6 +128,10 @@ dev.pm.dyn_samplingrate=1
 persist.sys.sf.disable_blurs=1
 ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
+debug.sf.enable_gl_backpressure=1
+ro.opengles.version=196610
+ro.qualcomm.cabl=2
+ro.vendor.display.cabl=2
 ro.qcom.svi.sensortype=2
 config.svi.xml=1
 config.svi.path=/vendor/data/sviconfig.xml
