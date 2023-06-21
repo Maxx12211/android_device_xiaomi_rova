@@ -139,7 +139,7 @@ public class PartsSearchIndexablesProvider extends SearchIndexablesProvider {
         MatrixCursor cursor = new MatrixCursor(NON_INDEXABLES_KEYS_COLUMNS);
         final Context ctx = getContext();
 
-        cursor.addRow(getNonIndexableRow("footer_preference"));
+//        cursor.addRow(getNonIndexableRow("footer_preference"));
 
         final boolean developerOptionsIsEnabled =
             Settings.Global.getInt(ctx.getContentResolver(),
@@ -147,7 +147,7 @@ public class PartsSearchIndexablesProvider extends SearchIndexablesProvider {
 
         if (!developerOptionsIsEnabled) {
             // If developer options is not enabled, UIBench shouldn't be searchable.
-            cursor.addRow(getNonIndexableRow(ctx.getString(R.string.jitter_test_title)));
+  //          cursor.addRow(getNonIndexableRow(ctx.getString(R.string.jitter_test_title)));
         }
 
         return cursor;

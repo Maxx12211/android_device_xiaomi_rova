@@ -26,6 +26,7 @@ import androidx.preference.PreferenceManager;
 
 import android.provider.Settings;
 
+
 public class DefaultSystemSettings {
     private static final String TAG = "DefaultSystemSettings";
     private static final boolean DEBUG = false;
@@ -51,34 +52,8 @@ public class DefaultSystemSettings {
     }
 
     public void onBootCompleted() {
-        if (isFirstRun("disable-nav-keys")) {
-            writeDisableNavkeysOption(true);
-        }
-
-        if (isFirstRun("enable-battery-light")) {
-            writeBatteryLightOption(true);
         }
     }
 
-       private void writeDisableNavkeysOption(final boolean enabled) {
-        final boolean virtualKeysEnabled = Settings.System.getIntForUser(
-                mContext.getContentResolver(), Settings.System.FORCE_SHOW_NAVBAR, 0,
-                UserHandle.USER_CURRENT) != 0;
-        if (enabled != virtualKeysEnabled) {
-            Settings.System.putIntForUser(mContext.getContentResolver(),
-                    Settings.System.FORCE_SHOW_NAVBAR, enabled ? 1 : 0,
-                    UserHandle.USER_CURRENT);
-        }
-    }
 
-    private void writeBatteryLightOption(final boolean enabled) {
-        final boolean isBatteryLightEnabled = Settings.System.getIntForUser(
-                mContext.getContentResolver(), Settings.System.BATTERY_LIGHT_ENABLED, 0,
-                UserHandle.USER_CURRENT) != 0;
-        if (enabled != isBatteryLightEnabled) {
-            	Settings.System.putIntForUser(mContext.getContentResolver(),
-                    	Settings.System.BATTERY_LIGHT_ENABLED, enabled ? 1 : 0,
-                    UserHandle.USER_CURRENT);
-        }
-    }
-}
+
