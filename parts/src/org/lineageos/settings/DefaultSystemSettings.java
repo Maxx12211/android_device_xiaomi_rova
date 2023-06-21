@@ -24,7 +24,7 @@ import android.os.UserHandle;
 
 import androidx.preference.PreferenceManager;
 
-import lineageos.providers.LineageSettings;
+import android.provider.Settings;
 
 public class DefaultSystemSettings {
     private static final String TAG = "DefaultSystemSettings";
@@ -60,24 +60,24 @@ public class DefaultSystemSettings {
         }
     }
 
-    private void writeDisableNavkeysOption(final boolean enabled) {
-        final boolean virtualKeysEnabled = LineageSettings.System.getIntForUser(
-                mContext.getContentResolver(), LineageSettings.System.FORCE_SHOW_NAVBAR, 0,
+       private void writeDisableNavkeysOption(final boolean enabled) {
+        final boolean virtualKeysEnabled = Settings.System.getIntForUser(
+                mContext.getContentResolver(), Settings.System.FORCE_SHOW_NAVBAR, 0,
                 UserHandle.USER_CURRENT) != 0;
         if (enabled != virtualKeysEnabled) {
-            LineageSettings.System.putIntForUser(mContext.getContentResolver(),
-                    LineageSettings.System.FORCE_SHOW_NAVBAR, enabled ? 1 : 0,
+            Settings.System.putIntForUser(mContext.getContentResolver(),
+                    Settings.System.FORCE_SHOW_NAVBAR, enabled ? 1 : 0,
                     UserHandle.USER_CURRENT);
         }
     }
 
     private void writeBatteryLightOption(final boolean enabled) {
-        final boolean isBatteryLightEnabled = LineageSettings.System.getIntForUser(
-                mContext.getContentResolver(), LineageSettings.System.BATTERY_LIGHT_ENABLED, 0,
+        final boolean isBatteryLightEnabled = Settings.System.getIntForUser(
+                mContext.getContentResolver(), Settings.System.BATTERY_LIGHT_ENABLED, 0,
                 UserHandle.USER_CURRENT) != 0;
         if (enabled != isBatteryLightEnabled) {
-            LineageSettings.System.putIntForUser(mContext.getContentResolver(),
-                    LineageSettings.System.BATTERY_LIGHT_ENABLED, enabled ? 1 : 0,
+            	Settings.System.putIntForUser(mContext.getContentResolver(),
+                    	Settings.System.BATTERY_LIGHT_ENABLED, enabled ? 1 : 0,
                     UserHandle.USER_CURRENT);
         }
     }
